@@ -44,6 +44,14 @@ class Asteroid:
     def draw(self):
         win.blit(ASTEROID, (int(self.x), int(self.y)))
 
+def create_asteroid(location, mouse):
+    t_x, t_y = location
+    m_x, m_y = mouse
+    vel_x = (m_x - t_x) / VEL_SCALE
+    vel_y = (m_y - t_y) / VEL_SCALE
+    obj = Asteroid(t_x, t_y, vel_x, vel_y, ASTEROID_MASS) 
+    return obj
+
 def main():
     running = True
     clock = pygame.time.Clock()
@@ -62,8 +70,7 @@ def main():
             # if the mouse is clicked
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if temp_obj_pos:
-                    t_x, t_y = temp_obj_pos
-                    obj = Asteroid(t_x, t_y, 1, 1, ASTEROID_MASS)
+                    obj = create_asteroid(temp_obj_pos, mouse_pos)
                     objects.append(obj)
                     temp_obj_pos = None
                 else:
@@ -75,9 +82,13 @@ def main():
             pygame.draw.line(win, WHITE, temp_obj_pos, mouse_pos, 2)
             win.blit(ASTEROID, (temp_obj_pos[0], temp_obj_pos[1]))
 
-        for obj in objects:
+        for obj in objects[:]:
             obj.draw()
             obj.move()
+            off_screen = obj.x < 0 or obj.x > WIDTH or obj.y < 0 or obj.y > HEIGHT
+            if off_screen:
+                objects.remove(obj)
+
         pygame.display.update()
 
     pygame.quit()
