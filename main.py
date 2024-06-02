@@ -12,7 +12,7 @@ pygame.display.set_caption("Gravitational Slingshot Effect Simulation")
 # Constants
 G = 6 * 10**-5
 FPS = 60
-VEL_SCALE = 100
+VEL_SCALE = 10
 ASTEROID_RADIUS = rd.randint(10, 20)
 
 BG = pygame.transform.scale(pygame.image.load("background.jpg"), (WIDTH, HEIGHT))
@@ -114,12 +114,11 @@ class Asteroid:
     def draw(self):
         win.blit(ASTEROID, (int(self.x), int(self.y)))
 
-
 def jupiter():
     MAX_ASTEROID_MASS = 6
-    MIN_ASTEROID_VEL = -100
-    MAX_ASTEROID_VEL = 100
-    PLANET_MASS = 10000000
+    MIN_ASTEROID_VEL = -50
+    MAX_ASTEROID_VEL = 50
+    PLANET_MASS = 100
     PLANET_RADIUS = 70
     planet = Planet(WIDTH // 2, HEIGHT // 2, PLANET_MASS, "jupiter", PLANET_RADIUS)
     planet.simulate(MAX_ASTEROID_MASS, MIN_ASTEROID_VEL, MAX_ASTEROID_VEL)
@@ -127,7 +126,6 @@ def jupiter():
 
 def main():
     jupiter()
-
 
 if __name__ == "__main__":
     main()
