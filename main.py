@@ -21,30 +21,30 @@ ASTEROID = pygame.transform.scale(
 )
 
 
-class Planet:
-    def __init__(self, x, y, MASS, PLANET_NAME, PLANET_RADIUS):
+class Object:
+    def __init__(self, x, y, MASS, OBJECT_NAME, OBJECT_RADIUS):
         self.x = x
         self.y = y
         self.MASS = MASS
-        self.PLANET_RADIUS = PLANET_RADIUS
-        self.PLANET_NAME = PLANET_NAME
-        self.PLANET = pygame.transform.scale(
-            pygame.image.load(self.PLANET_NAME + ".png"),
-            (self.PLANET_RADIUS * 2, self.PLANET_RADIUS * 2),
+        self.OBJECT_RADIUS = OBJECT_RADIUS
+        self.OBJECT_NAME = OBJECT_NAME
+        self.OBJECT = pygame.transform.scale(
+            pygame.image.load(self.OBJECT_NAME + ".png"),
+            (self.OBJECT_RADIUS * 2, self.OBJECT_RADIUS * 2),
         )
         self.MAX_ASTEROIDS = rd.randint(50, 100)
 
     def draw(self):
         win.blit(
-            self.PLANET, (self.x - self.PLANET_RADIUS, self.y - self.PLANET_RADIUS)
+            self.OBJECT, (self.x - self.OBJECT_RADIUS, self.y - self.OBJECT_RADIUS)
         )
 
     def simulate(self, MAX_ASTEROID_MASS, MIN_ASTEROID_VEL, MAX_ASTEROID_VEL):
         running = True
         clock = pygame.time.Clock()
 
-        planet = Planet(
-            WIDTH // 2, HEIGHT // 2, self.MASS, self.PLANET_NAME, self.PLANET_RADIUS
+        planet = Object(
+            WIDTH // 2, HEIGHT // 2, self.MASS, self.OBJECT_NAME, self.OBJECT_RADIUS
         )
         objects = []
         done_adding_asteroids = False
@@ -71,7 +71,7 @@ class Planet:
                 off_screen = obj.x < 0 or obj.x > WIDTH or obj.y < 0 or obj.y > HEIGHT
                 collided = (
                     math.sqrt((obj.x - planet.x) ** 2 + (obj.y - planet.y) ** 2)
-                    <= self.PLANET_RADIUS
+                    <= self.OBJECT_RADIUS
                 )
                 if off_screen or collided:
                     objects.remove(obj)
@@ -114,18 +114,31 @@ class Asteroid:
     def draw(self):
         win.blit(ASTEROID, (int(self.x), int(self.y)))
 
-def jupiter():
+
+def uranus():
     MAX_ASTEROID_MASS = 6
     MIN_ASTEROID_VEL = -50
     MAX_ASTEROID_VEL = 50
-    PLANET_MASS = 100
-    PLANET_RADIUS = 70
-    planet = Planet(WIDTH // 2, HEIGHT // 2, PLANET_MASS, "jupiter", PLANET_RADIUS)
-    planet.simulate(MAX_ASTEROID_MASS, MIN_ASTEROID_VEL, MAX_ASTEROID_VEL)
+    OBJECT_MASS = 100
+    OBJECT_RADIUS = 70
+    uranus = Object(WIDTH // 2, HEIGHT // 2, OBJECT_MASS, "uranus", OBJECT_RADIUS)
+    uranus.simulate(MAX_ASTEROID_MASS, MIN_ASTEROID_VEL, MAX_ASTEROID_VEL)
+
+
+def black_hole():
+    MAX_ASTEROID_MASS = 6
+    MIN_ASTEROID_VEL = -50
+    MAX_ASTEROID_VEL = 50
+    OBJECT_MASS = 100000000
+    OBJECT_RADIUS = 100
+    blackhole = Object(WIDTH // 2, HEIGHT // 2, OBJECT_MASS, "blackhole", OBJECT_RADIUS)
+    blackhole.simulate(MAX_ASTEROID_MASS, MIN_ASTEROID_VEL, MAX_ASTEROID_VEL)
 
 
 def main():
-    jupiter()
+    # uranus()
+    black_hole()
+
 
 if __name__ == "__main__":
     main()
