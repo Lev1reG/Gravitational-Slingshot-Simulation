@@ -15,15 +15,15 @@
 - [Modelling System](#modelling-system)
   - [Stochastic Aspect](#stochastic-aspect)
   - [Source Code](#source-code)
-    - [Library Imports and Initialization](#library-imports-and-initialization)
-    - [Background and Object Initialization](#background-and-object-initialization)
-    - [Object Class Methods](#object-class-methods)
-    - [Asteroid Class Methods](#asteroid-class-methods)
-    - [Simulation Functions](#simulation-functions)
-    - [Main Function](#main-function)
-  - [Simulation Results](#simulation-results)
-  - [Analysis & Summary](#analysis-summary)
-  - [Reference](#reference)
+  - [Library Imports and Initialization](#library-imports-and-initialization) 
+  - [Background and Object Initialization](#background-and-object-initialization)
+  - [Object Class Methods](#object-class-methods)
+  - [Asteroid Class Methods](#asteroid-class-methods)
+  - [Simulation Functions](#simulation-functions)
+  - [Main Function](#main-function)
+- [Simulation Results](#simulation-results)
+- [Analysis & Summary](#analysis-summary)
+- [Reference](#reference)
 
 ## **Github** <a name="github"><a/>
 
@@ -273,9 +273,9 @@ if __name__ == "__main__":
 
 ## Simulation Results <a name="simulation-results"><a/>
 
-[uranus simulation.mov](assets/uranus_simulation.mov)
+[![Uranus Simulation](uranus simulation.mov)](assets/uranus_simulation.mov)
 
-[blackhole simulation.mov](assets/blackhole_simulation.mov)
+[![Blackhole Simulation](blackhole simulation.mov)](assets/blackhole_simulation.mov)
 
 ## Analysis & Summary <a name="analysis-summary"><a/>
 
@@ -283,4 +283,4 @@ The project demonstrates the principles of gravitational forces and their impact
 
 ## Reference <a name="reference"><a/>
 
-[https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO](https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO)
+[![Reference](https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO)](https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO)
