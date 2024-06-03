@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-- [github](#github)
+- [Github](#github)
 - [LinkedIn](#linkedin)
 - [Instagram](#instagram)
 - [Why this project?](#why-this-project)
@@ -273,9 +273,9 @@ if __name__ == "__main__":
 
 ## Simulation Results <a name="simulation-results"><a/>
 
-[![Uranus Simulation](uranus simulation.mov)](assets/uranus_simulation.mov)
+https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/blob/main/assets/blackhole%20simulation.mov
 
-[![Blackhole Simulation](blackhole simulation.mov)](assets/blackhole_simulation.mov)
+https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/blob/main/assets/uranus%20simulation.mov
 
 ## Analysis & Summary <a name="analysis-summary"><a/>
 
@@ -283,4 +283,4 @@ The project demonstrates the principles of gravitational forces and their impact
 
 ## Reference <a name="reference"><a/>
 
-[![Reference](https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO)](https://www.youtube.com/embed/HTfwhmHVpqM?si=Ro5wKs0lktcx8uVO)
+[![Reference](https://img.youtube.com/vi/HTfwhmHVpqM)/0.jpg)](https://www.youtube.com/watch?v=HTfwhmHVpqM)
