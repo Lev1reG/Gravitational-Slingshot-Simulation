@@ -273,9 +273,9 @@ if __name__ == "__main__":
 
 ## Simulation Results <a name="simulation-results"><a/>
 
-https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/blob/main/assets/blackhole%20simulation.mov
+https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/assets/109866900/029ba4b8-39f4-46d4-a8e9-7821873f2e56
 
-https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/blob/main/assets/uranus%20simulation.mov
+https://github.com/Lev1reG/Gravitational-Slingshot-Simulation/assets/109866900/6f4a5fbe-c62e-4dab-af8e-9b37cd9064fd
 
 ## Analysis & Summary <a name="analysis-summary"><a/>
 
