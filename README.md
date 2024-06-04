@@ -256,7 +256,7 @@ if __name__ == "__main__":
 - `draw()`: Draws the object on the screen.
 - `simulate()`: Simulates the gravitational interactions, creating and updating asteroid movements, detecting collisions, and updating the display.
 
-## **Asteroid Class Methods** <a name="asteroid-class-methods"><a
+## **Asteroid Class Methods** <a name="asteroid-class-methods"><a/>
 
 - `set_velocity()`: Sets the initial velocity of the asteroid.
 - `move()`: Calculates the gravitational force exerted by a planet on the asteroid, updates the asteroid's velocity and position based on this force, and moves the asteroid accordingly.
